@@ -6,6 +6,6 @@ BewHaven is a full stack coffee ordering app built in the MERN stack.
 Jeremy St Pierre \
 Karina Karanadze \
 Alexander Bouwhuis \
-Mitchel Lymer \git 
+Mitchel Lymer \
 Sean Villamonte \
 Shamsi Gafarov \
