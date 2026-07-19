@@ -1,16 +1,12 @@
 var express = require('express');
 var router = express.Router();
-let itmesController = require('../controllers/items');
-let authController =  require('../controllers/auth');
-router.get("/", 
-    // authController.validateToken, 
-    authController.logToken, 
-    itemsController.getAll);
-router.post("/",     
-    // authController.validateToken, 
-    authController.logToken, 
-    itemssController.add);
-router.get("/:id", authController.validateToken, itemsController.getById);
-router.put("/:id", itemsController.update);
-router.delete("/:id", projectsController.remove);
+
+var itemsController = require('../controllers/items');
+
+router.get('/', itemsController.getAll);
+router.post('/', itemsController.add);
+router.get('/:itemId', itemsController.getById);
+router.put('/:id', itemsController.update);
+router.delete('/:id', itemsController.remove);
+
 module.exports = router;

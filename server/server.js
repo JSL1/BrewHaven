@@ -6,11 +6,10 @@ const app = express();
 
 const db = require('./config/db');
 
+//middlewares assignment
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-//middlewares assignment
 app.use(logger('dev'));
 
 //catch 404 and send it to error handler
