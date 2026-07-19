@@ -21,7 +21,7 @@ module.exports.signin = async function(req, res, next) {
         }
 
         //generate the token
-        let token = jwt.sign(payload, key. {
+        let token = jwt.sign(payload, key {
             algorithm: 'HS512',
             expiresIn: "20min"
         });
