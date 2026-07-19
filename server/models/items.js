@@ -10,7 +10,7 @@ let itemsModel = mongoose.Schema(
         category: String
     },
     {
-        collection: 'items
+        collection: 'items'
     }
 );
 
