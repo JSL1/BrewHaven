@@ -3,7 +3,6 @@ const logger = require('morgan');
 const createError = require('http-errors');
 const cors = require('cors');
 const app = express();
-
 const db = require('./config/db');
 
 //middlewares assignment
@@ -11,6 +10,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
+
+//declaring and mounting routers
+var indexRouter = require('./routes/index');
+var orderRouter = require('./routes/orders');
+var itemRouter = require('./routes/items');
+var userRouter = require('./routes/users');
+app.use('/', indexRouter);
+app.use('/orders', orderRouter);
+app.use('/items', itemRouter);
+app.use('/users', userRouter);
 
 //catch 404 and send it to error handler
 app.use(function(err, req, res, next) {

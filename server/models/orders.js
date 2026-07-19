@@ -1,4 +1,4 @@
-onst { default: mongoose } = require('mongoose');
+const { default: mongoose } = require('mongoose');
 let moogoose = require('mongoose');
 
 let ordersModel = mongoose.Schema({

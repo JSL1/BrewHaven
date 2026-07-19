@@ -36,7 +36,7 @@ let usersModel = mongoose.Schema(
 
 usersModel.virtual('fullName')
     .get(function() {
-        return this.firstname + ' ' this.lastname;
+        return firstname + ' ' + lastname;
     })
     .set(function (fullName) {
         let splitName = fullName.split(' ');
@@ -75,4 +75,4 @@ usersModel.set('toJSON', {
     }
 });
 
-module.exports = moogose.model("Users", usersModel);
+module.exports = mongoose.model("Users", usersModel);
