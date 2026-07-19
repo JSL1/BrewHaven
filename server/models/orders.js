@@ -5,6 +5,9 @@ let ordersModel = mongoose.Schema({
     customerName: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
     status: { type: String, enum: ['Pending', 'Served', 'Cancelled'], default: 'Pending' }
+},
+{
+    collection: 'orders'
 });
 
 ordersModel.set('toJSON', {

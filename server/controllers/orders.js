@@ -23,6 +23,7 @@ module.exports.add = async function(req, res, next) {
 
 //READ order
 module.exports.getOrderDetails = async function (req, res, next) {
+    const orderId = req.params.orderId;
     const lines = await OrderLineItem.find({ orderId })
         .populate('itemId')
         .exec();

@@ -20,6 +20,9 @@ const orderItemLinesModel = new mongoose.Schema({
   priceAtPurchase: { 
     type: Number, 
     required: true }
+},
+{
+    collection: 'orderItemLines'
 });
 
 orderItemLinesModel.set('toJSON', {
