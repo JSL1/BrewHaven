@@ -1,7 +1,15 @@
 require('dotenv').config();
-const { ServerApiVersion } = require('mongodb');
 const mongoose = require('mongoose');
 
-const uri = process.env.ATLASDB;
+const uri = process.env.ATLAS_URI;
 
-const clientOptions = { ServerApi: { version: '1', strict: true, deprecationErrors:true }};
+mongoose.connect(uri);
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function() {
+    console.log('Connected to MongoDB Atlas successfully');
+});
+
+module.exports = db;

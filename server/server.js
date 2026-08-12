@@ -3,41 +3,46 @@ const logger = require('morgan');
 const createError = require('http-errors');
 const cors = require('cors');
 const app = express();
-const db = require('./config/db');
+require('dotenv').config();
 
-//middlewares assignment
+// Import database connection
+require('./config/db');
+
+// Middlewares assignment
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
-//declaring and mounting routers
+// Mounting routers
 var indexRouter = require('./routes/index');
+var authRouter = require('./routes/auth');
 var orderRouter = require('./routes/orders');
 var itemRouter = require('./routes/items');
 var userRouter = require('./routes/users');
+
 app.use('/', indexRouter);
+app.use('/auth', authRouter);
 app.use('/orders', orderRouter);
 app.use('/items', itemRouter);
 app.use('/users', userRouter);
 
-//catch 404 and send it to error handler
-app.use(function(err, req, res, next) {
+// Catch 404 and send it to error handler
+app.use(function(req, res, next) {
     next(createError(404));
-})
-
-//error handler
-app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.json(
-        {
-            'success': false,
-            'message': err.message
-        }
-    );
 });
 
-//initialize the server
-app.listen(3000, () => {
-    console.log('Server running at http://localhost:3000/');
+// Error handler
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.json({
+        'success': false,
+        'message': err.message
+    });
+});
+
+// Initialize the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log('Server running at http://localhost:' + PORT + '/');
 });
