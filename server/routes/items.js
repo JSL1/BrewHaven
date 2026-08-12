@@ -5,7 +5,7 @@ var itemsController = require('../controllers/items');
 
 router.get('/', itemsController.getAll);
 router.post('/', itemsController.add);
-router.get('/:itemId', itemsController.getById);
+router.get('/:id', itemsController.getById);
 router.put('/:id', itemsController.update);
 router.delete('/:id', itemsController.remove);
 
