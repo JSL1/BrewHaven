@@ -1,4 +1,4 @@
-let itemsModel = require('../models/items');
+let ItemsModel = require('../models/items');
 
 //CREATE item
 module.exports.add = async function(req, res, next) {
