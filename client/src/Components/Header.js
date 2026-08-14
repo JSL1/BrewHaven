@@ -1,36 +1,36 @@
 import React, { Component } from "react";
 import { Link } from "react-router";
-import '../css/Header.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const NavItem = (props) => {
-    if (!props.cart) {
-        return (
-        <div className="nav-item">
-            <Link to={props.to} className='nav-link'>{props.name}</Link>
-        </div>)
-    } else {
-        return (
-            <dliv className="nav-item-cart">
-                <Link to='./'><FontAwesomeIcon icon={byPrefixAndName.fas['cart-shopping']} /> (0) Cart</Link>
-            </dliv>
-        );
-    }
-}
+import '../App.css';
+import {
+  Coffee,
+  ShoppingBag,
+  Truck,
+  Gift,
+  MapPin,
+  Phone,
+  Mail
+} from 'lucide-react';
 
 const Header = () => {
     return (
-        <header>
-            <div id="Logo">BrewHaven</div>
-            <nav>
-                <NavItem to='./' name='Home' />
-                <NavItem to='./' name='Menu' />
-                <NavItem to='./' name='Rewards' />
-                <NavItem to='./' name='Orders' />
-                <NavItem to='./' name='Thing' />
-                <NavItem cart={true} />
-            </nav>
-        </header>
+      <nav className="navbar">
+        <div className="logo">
+          <span className="logo-icon">
+            <Coffee size={20} />
+          </span>
+          BrewHaven
+        </div>
+
+        <div className="nav-links">
+          <Link to="./">Home</Link>
+          <Link to="./menu">Menu</Link>
+          <Link to="./productdetails">Products</Link>
+          <Link to="./">Rewards</Link>
+          <Link to="./">Orders</Link>
+          <Link to="./">Profile</Link>
+          <button className="cart">Cart (2)</button>
+        </div>
+      </nav>
     );
 }
 

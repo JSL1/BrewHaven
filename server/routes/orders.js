@@ -1,12 +1,13 @@
+var authController = require('../controllers/auth');
 var express = require('express');
 var router = express.Router();
 
 var ordersController = require('../controllers/orders');
 
-router.get('/', ordersController.getAll);
-router.post('/', ordersController.add);
-router.get('/:orderId', ordersController.getOrderDetails);
-router.put('/:id', ordersController.update);
-router.delete('/:id', ordersController.remove);
+router.get('/', authController.validateToken, ordersController.getAll);
+router.post('/', authController.validateToken, ordersController.add);
+router.get('/:orderId', authController.validateToken, ordersController.getOrderDetails);
+router.put('/:id', authController.validateToken, ordersController.update);
+router.delete('/:id', authController.validateToken, ordersController.remove);
 
 module.exports = router;

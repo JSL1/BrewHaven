@@ -4,10 +4,14 @@ import App from "./App";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Homepage from "./Components/Homepage";
+import Menu from "./pages/menu";
+import ProductDetails from "./pages/ProductDetails";
 
 const RouteSwitch = () => {
     <Routes>
         <Route path='/' element={<Homepage />}/>
+        <Route path='/menu' element={<Menu />} /> 
+        <Route path='/productdetails' element={<ProductDetails />}/>
     </Routes>
 }
 

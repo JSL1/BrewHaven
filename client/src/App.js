@@ -2,9 +2,10 @@ import RouteSwitch from './RouteSwitch';
 import { Router } from 'react-router';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import './css/Main.css';
-
+import { useState } from 'react';
+import './App.css';
 function App() {
+  
   return (
     <>
         <Header />
