@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Link from "react-router-dom";
+import { Link } from "react-router";
+import '../css/Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavItem = (props) => {
     if (!props.cart) {
@@ -10,7 +12,7 @@ const NavItem = (props) => {
     } else {
         return (
             <dliv className="nav-item-cart">
-                <Link to='./'>(0) Cart</Link>
+                <Link to='./'><FontAwesomeIcon icon={byPrefixAndName.fas['cart-shopping']} /> (0) Cart</Link>
             </dliv>
         );
     }
@@ -19,7 +21,7 @@ const NavItem = (props) => {
 const Header = () => {
     return (
         <header>
-            <div id="logo">BrewHaven</div>
+            <div id="Logo">BrewHaven</div>
             <nav>
                 <NavItem to='./' name='Home' />
                 <NavItem to='./' name='Menu' />
