@@ -1,12 +1,13 @@
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 function ProductDetails() {
   return (
     <div className="product-page">
 
-      <div className="product-back">
+      <Link className="product-back" to="/menu">
         Back to Menu
-      </div>
+      </Link>
 
       <div className="product-details">
 

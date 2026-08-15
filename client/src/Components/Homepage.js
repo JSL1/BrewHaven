@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
 import './../App.css';
-import Menu from '../pages/menu';
-import ProductDetails from '../pages/ProductDetails';
-import { Coffee, ShoppingBag, Truck, Gift, MapPin, Phone, Mail} from 'lucide-react';
-import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
-
+import { Coffee, Truck, Gift } from 'lucide-react';
 
 const Homepage = () => {
-    return (
+  return (
     <>
       <section className="hero" id="home">
         <div className="hero-content">
@@ -22,21 +17,25 @@ const Homepage = () => {
           </h1>
 
           <p>
-            Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut eveniet
-            consequuntur non consectetur enim At veniam labore qui enim
-            necessitatibus est expedita excepturi eos atque harum.
+            Fresh coffee, tea and baked goods made for every kind of day.
           </p>
 
           <div className="hero-buttons">
-            <button className="order-button">Order Now →</button>
-            <button className="browse-button">Browse Menu</button>
+            <a href="/menu">
+              <button className="order-button">Order Now</button>
+            </a>
+
+            <a href="/menu">
+              <button className="browse-button">Browse Menu</button>
+            </a>
           </div>
         </div>
 
         <div className="hero-image">
-          <img src="/images/hero.jpg" alt="Latte"/>
+          <img src="/images/hero.jpg" alt="Latte" />
         </div>
       </section>
+
 
       <section className="featured" id="menu">
         <h2>Featured Barista Specialties</h2>
@@ -44,58 +43,67 @@ const Homepage = () => {
         <div className="product-grid">
 
           <div className="product-card">
-
             <div className="product-image">
-              <img src="/images/coffee1.png" alt="Coffee 1"/>
+              <img src="/images/coffee1.png" alt="Iced Caramel Latte" />
             </div>
 
             <div className="product-info">
-              <h3>Lorem ipsum dolor</h3>
+              <h3>Iced Caramel Latte</h3>
               <span className="price">$5.75</span>
+
               <p>
-                Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut
-                eveniet consequuntur non consectetur enim.
+                Espresso, milk, caramel and ice.
               </p>
-              <button>Add to Cart ＋</button>
+
+              <a href="/menu">
+                <button>View Menu</button>
+              </a>
             </div>
           </div>
 
-          <div className="product-card">
 
+          <div className="product-card">
             <div className="product-image">
-              <img src="/images/coffee2.png" alt="Coffee 2"/>
+              <img src="/images/coffee2.png" alt="Vanilla Latte" />
             </div>
 
             <div className="product-info">
-              <h3>Lorem ipsum dolor</h3>
+              <h3>Vanilla Latte</h3>
               <span className="price">$6.25</span>
+
               <p>
-                Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut
-                eveniet consequuntur non consectetur enim.
+                Espresso with steamed milk and vanilla.
               </p>
-              <button>Add to Cart ＋</button>
+
+              <a href="/menu">
+                <button>View Menu</button>
+              </a>
             </div>
           </div>
 
-          <div className="product-card">
 
+          <div className="product-card">
             <div className="product-image">
-              <img src="/images/coffee3.jpg" alt="Coffee 3"/>
+              <img src="/images/coffee3.jpg" alt="Iced Coffee" />
             </div>
 
             <div className="product-info">
-              <h3>Lorem ipsum dolor</h3>
+              <h3>Iced Coffee</h3>
               <span className="price">$4.95</span>
+
               <p>
-                Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut
-                eveniet consequuntur non consectetur enim.
+                Cold coffee served over ice.
               </p>
-              <button>Add to Cart ＋</button>
+
+              <a href="/menu">
+                <button>View Menu</button>
+              </a>
             </div>
           </div>
 
         </div>
       </section>
+
 
       <section className="categories">
         <h2>Popular Menu Categories</h2>
@@ -103,33 +111,40 @@ const Homepage = () => {
         <div className="category-grid">
 
           <div className="category">
-            <div className="category-image">Image</div>
+            <div className="category-image category-placeholder">
+              Cold Drinks
+            </div>
             <span>15 choices</span>
-            <p>Cold Drinks →</p>
+            <p>Cold Drinks</p>
           </div>
 
           <div className="category">
-            <div className="category-image">Image</div>
+            <div className="category-image category-placeholder">
+              Iced Coffees
+            </div>
             <span>12 choices</span>
-            <p>Iced Coffees →</p>
+            <p>Iced Coffees</p>
           </div>
 
           <div className="category">
-            <div className="category-image">Image</div>
+            <div className="category-image category-placeholder">
+              Tea
+            </div>
             <span>8 choices</span>
-            <p>Tea →</p>
+            <p>Tea</p>
           </div>
 
           <div className="category">
             <div className="category-image">
-              <img src="/images/bakery.jpg" alt="bakery"/>
+              <img src="/images/bakery.jpg" alt="Bakery" />
             </div>
             <span>14 choices</span>
-            <p>Fresh Bakery →</p>
+            <p>Fresh Bakery</p>
           </div>
 
         </div>
       </section>
+
 
       <section className="difference">
         <p className="small-title">The BrewHaven Difference</p>
@@ -141,40 +156,44 @@ const Homepage = () => {
             <div className="icon">
               <Coffee size={22} />
             </div>
+
             <h3>Fresh Ingredients</h3>
+
             <p>
-              Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut eveniet
-              consequuntur non consectetur enim.
+              We use fresh ingredients in our drinks and food.
             </p>
           </div>
+
 
           <div className="difference-card">
             <div className="icon">
               <Truck size={22} />
             </div>
+
             <h3>Fast Delivery</h3>
+
             <p>
-              Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut eveniet
-              consequuntur non consectetur enim.
+              Order online and get your order delivered.
             </p>
           </div>
+
 
           <div className="difference-card">
             <div className="icon">
               <Gift size={22} />
             </div>
+
             <h3>Rewards Program</h3>
+
             <p>
-              Lorem ipsum dolor sit amet. Sit voluptatem explicabo ut eveniet
-              consequuntur non consectetur enim.
+              Earn rewards when you order from BrewHaven.
             </p>
           </div>
 
         </div>
       </section>
     </>
-
-    );
-}
+  );
+};
 
 export default Homepage;

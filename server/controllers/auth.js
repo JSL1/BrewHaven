@@ -56,10 +56,8 @@ module.exports.signin = async function(req, res, next) {
             role: user.role
         };
 
-<<<<<<< HEAD
         //generate the token
-=======
->>>>>>> b7f5fb531eb90755f00cee59b8ce7f7a6467d734
+// >>>>>>> b7f5fb531eb90755f00cee59b8ce7f7a6467d734
         let token = jwt.sign(payload, key, {
             algorithm: 'HS512',
             expiresIn: "7d"
