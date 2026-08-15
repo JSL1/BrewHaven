@@ -8,11 +8,13 @@ import Menu from "./pages/menu";
 import ProductDetails from "./pages/ProductDetails";
 
 const RouteSwitch = () => {
-    <Routes>
-        <Route path='/' element={<Homepage />}/>
-        <Route path='/menu' element={<Menu />} /> 
-        <Route path='/productdetails' element={<ProductDetails />}/>
-    </Routes>
+    return (
+        <Routes>
+            <Route path='/' element={<Homepage />}/>
+            <Route path='/menu' element={<Menu />} /> 
+            <Route path='/productdetails' element={<ProductDetails />}/>
+        </Routes>
+    );
 }
 
 export default RouteSwitch;

@@ -2,29 +2,13 @@ import React, { Component } from 'react';
 import './../App.css';
 import Menu from '../pages/menu';
 import ProductDetails from '../pages/ProductDetails';
-
-
-import {
-  Coffee,
-  ShoppingBag,
-  Truck,
-  Gift,
-  MapPin,
-  Phone,
-  Mail
-} from 'lucide-react'
-
-import { 
-  FaInstagram,
-  FaFacebookF,
-  FaTwitter
-} from 'react-icons/fa';
+import { Coffee, ShoppingBag, Truck, Gift, MapPin, Phone, Mail} from 'lucide-react';
+import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
 
 const Homepage = () => {
     return (
-
-    <div className="App">
+    <>
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="tag">Now offering custom craft roasts</div>
@@ -188,10 +172,8 @@ const Homepage = () => {
 
         </div>
       </section>
+    </>
 
-      
-
-    </div>
     );
 }
 
