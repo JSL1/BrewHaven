@@ -28,7 +28,7 @@ const Header = () => {
           <Link to="./">Rewards</Link>
           <Link to="./">Orders</Link>
           <Link to="./">Profile</Link>
-          <button className="cart">Cart (2)</button>
+          <Link to="./cart">Cart</Link>
         </div>
       </nav>
     );

@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
 
-function Menu() {
+function Menu({ cart, setCart }) {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All Categories');
   const [loading, setLoading] = useState(true);
-  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch('https://brewhaven-backend-qf3e.onrender.com/items')
