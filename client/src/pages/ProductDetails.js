@@ -1,6 +1,7 @@
 import '../App.css';
 
 function ProductDetails() {
+
   return (
     <div className="product-page">
 
