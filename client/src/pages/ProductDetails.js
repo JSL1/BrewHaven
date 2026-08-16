@@ -1,13 +1,21 @@
+import React, { Component, useState } from "react";
 import '../App.css';
+import { Link, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import cart, { add } from '../Redux/cart';
 
 function ProductDetails() {
+
+  const loc = useLocation();
+  const product = loc.state.product;
+  const dispatch = useDispatch();
 
   return (
     <div className="product-page">
 
-      <div className="product-back">
+      <Link className="product-back" to="/menu">
         Back to Menu
-      </div>
+      </Link>
 
       <div className="product-details">
 
@@ -18,22 +26,21 @@ function ProductDetails() {
         <div className="product-details-info">
           <p className="product-label">BARISTA FAVOURITE</p>
 
-          <h1>Classic Latte</h1>
+          <h1>{product.title}</h1>
 
-          <h2>$6.25</h2>
+          <h2>{product.price}</h2>
 
           <p className="product-description">
-            Smooth espresso combined with creamy steamed milk
-            for a rich and comforting cup.
+            {product.description}
           </p>
 
           <div className="product-option">
             <h3>Size</h3>
 
             <div className="option-buttons">
-              <button>Small</button>
-              <button>Medium</button>
-              <button>Large</button>
+                <button>Small</button>
+                <button>Medium</button>
+                <button>Large</button>
             </div>
           </div>
 
@@ -41,9 +48,9 @@ function ProductDetails() {
             <h3>Milk</h3>
 
             <div className="option-buttons">
-              <button>Regular</button>
               <button>Oat</button>
-              <button>Almond</button>
+              <button>Regular</button>
+              <button>None</button>
             </div>
           </div>
 
@@ -54,7 +61,16 @@ function ProductDetails() {
               <button>+</button>
             </div>
 
-            <button className="add-product">
+            <button className="add-product" onClick={
+              () => dispatch(add({
+                id: product.id,
+                title: product.title,
+                description: product.description,
+                price: product.price,
+                category: product.category,
+                quantity: 1
+              }))
+            }>
               Add to Cart
             </button>
           </div>

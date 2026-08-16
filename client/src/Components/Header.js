@@ -1,37 +1,29 @@
-import React, { Component } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import '../App.css';
-import {
-  Coffee,
-  ShoppingBag,
-  Truck,
-  Gift,
-  MapPin,
-  Phone,
-  Mail
-} from 'lucide-react';
+import { Coffee } from 'lucide-react';
 
 const Header = () => {
-    return (
-      <nav className="navbar">
-        <div className="logo">
-          <span className="logo-icon">
-            <Coffee size={20} />
-          </span>
-          BrewHaven
-        </div>
+  return (
+    <nav className="navbar">
 
-        <div className="nav-links">
-          <Link to="./">Home</Link>
-          <Link to="./menu">Menu</Link>
-          <Link to="./productdetails">Products</Link>
-          <Link to="./">Rewards</Link>
-          <Link to="./">Orders</Link>
-          <Link to="./">Profile</Link>
-          <button className="cart">Cart (2)</button>
-        </div>
-      </nav>
-    );
-}
+      <Link to="/" className="logo">
+        <span className="logo-icon">
+          <Coffee size={20} />
+        </span>
+        BrewHaven
+      </Link>
+
+      <div className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/productdetails">Products</Link>
+        <Link to="/orders">Orders</Link>
+        <Link to="/profile">Profile</Link>
+        <Link to="/cart">Cart</Link>
+      </div>
+
+    </nav>
+  );
+};
 
 export default Header;
