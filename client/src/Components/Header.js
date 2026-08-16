@@ -16,7 +16,6 @@ const Header = () => {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/menu">Menu</Link>
-        <Link to="/productdetails">Products</Link>
         <Link to="/orders">Orders</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/cart">Cart</Link>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
+import API_BASE_URL from "../config/api";
 
 function Signup() {
     const [firstname, setFirstname] = useState("");
@@ -23,7 +24,7 @@ function Signup() {
 
         try {
             const response = await fetch(
-                "https://brewhaven-backend-qf3e.onrender.com/auth/register",
+                `${API_BASE_URL}/auth/register`,
                 {
                     method: "POST",
                     headers: {

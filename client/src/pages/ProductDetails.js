@@ -5,7 +5,22 @@ import { Link, useLocation } from "react-router-dom";
 function ProductDetails({ cart, setCart }) {
 
   const loc = useLocation();
-  const product = loc.state.product;
+  const product = loc.state?.product;
+
+  if (!product) {
+    return (
+        <div className="product-page">
+            <h1>Please select a product</h1>
+
+            <Link
+                className="product-back"
+                to="/menu"
+            >
+                View Menu
+            </Link>
+        </div>
+    );
+}
 
   return (
     <div className="product-page">

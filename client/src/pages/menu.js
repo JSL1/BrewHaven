@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import API_BASE_URL from "../config/api";
 
 
 function Menu({ cart, setCart }) {
@@ -11,7 +12,7 @@ function Menu({ cart, setCart }) {
   const [addedItem, setAddedItem] = useState(null);
 
   useEffect(() => {
-    fetch('https://brewhaven-backend-qf3e.onrender.com/items')
+    fetch(`${API_BASE_URL}/items`)
       .then(response => response.json())
       .then(result => {
         setItems(result.data || []);
