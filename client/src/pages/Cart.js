@@ -1,7 +1,4 @@
-import '../App.css';
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import cart, { add, remove, updatetotal } from '../Redux/cart';
+import "../App.css";
 
 function Cart({ cart = [], setCart }) {
 
