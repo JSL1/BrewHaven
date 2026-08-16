@@ -7,6 +7,7 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Orders from "./pages/Orders";
+import Signup from "./pages/Signup";
 
 const RouteSwitch = () => {
     const [cart, setCart] = useState([]);
@@ -29,6 +30,7 @@ const RouteSwitch = () => {
                 }
             />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/orders" element={<Orders />} />
         </Routes>

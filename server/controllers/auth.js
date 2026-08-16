@@ -6,7 +6,13 @@ let key = process.env.SECRETKEY;
 
 module.exports.register = async function(req, res, next) {
     try {
-        let newUser = new UsersModel(req.body);
+        let newUser = new UsersModel({
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            password: req.body.password,
+            role: "user"
+    });
         await newUser.save();
         
         let payload = {

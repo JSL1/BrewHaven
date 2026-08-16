@@ -955,6 +955,39 @@ footer p {
   opacity: 0.9;
 }
 
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-form label {
+  color: #333;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #9bcec1;
+  border-radius: 7px;
+  background: white;
+  color: #000;
+  font-size: 15px;
+}
+
+.profile-form input:focus {
+  outline: none;
+  border-color: #67a2c5;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 /* orders */
 
 .orders-page {
