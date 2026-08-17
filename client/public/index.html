@@ -3,52 +3,58 @@
   <head>
     <meta charset="utf-8" />
 
-    <!--
-      The favicon is removed here so the default React icon is not shown.
-      A BrewHaven favicon can be added later if needed.
-    -->
+    <!-- BrewHaven logo for the browser tab -->
+    <link
+      rel="icon"
+      href="%PUBLIC_URL%/images/brewhaven-logo.png"
+    />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
 
-    <meta name="theme-color" content="#6f4e37" />
+    <meta
+      name="theme-color"
+      content="#6f4e37"
+    />
 
     <meta
       name="description"
-      content="BrewHaven coffee shop website"
+      content="BrewHaven Coffee Shop"
     />
 
     <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop.
+      manifest.json provides metadata used when the website
+      is installed on a mobile device or desktop.
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="manifest"
+      href="%PUBLIC_URL%/manifest.json"
+    />
 
     <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the public folder during the build.
-      Only files inside the public folder can be referenced from this HTML.
-
-      This helps the website work correctly with client-side routing and
-      when the website is deployed.
+      %PUBLIC_URL% points to the public folder.
+      Files inside public can be referenced from this file.
     -->
 
     <title>BrewHaven</title>
   </head>
 
   <body>
-    <noscript>You need to enable JavaScript to run BrewHaven.</noscript>
+    <noscript>
+      You need to enable JavaScript to run BrewHaven.
+    </noscript>
 
     <div id="root"></div>
 
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      This HTML file is used as the main template for the website.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the body tag.
+      The React application will be loaded inside the root div.
 
-      To begin development, run npm start.
-      To create a production bundle, use npm run build.
+      To run the website during development, use npm start.
+      To make a production build, use npm run build.
     -->
   </body>
 </html>
