@@ -19,13 +19,11 @@ var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 var orderRouter = require('./routes/orders');
 var itemRouter = require('./routes/items');
-var userRouter = require('./routes/users');
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/orders', orderRouter);
 app.use('/items', itemRouter);
-app.use('/users', userRouter);
 
 // Catch 404 and send it to error handler
 app.use(function(req, res, next) {

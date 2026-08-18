@@ -1,14 +1,26 @@
-import React, { Component, useState } from "react";
-import '../App.css';
-import { Link, useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import cart, { add } from '../Redux/cart';
+import React from "react";
+import "../App.css";
+import { Link, useLocation } from "react-router-dom";
 
-function ProductDetails() {
+function ProductDetails({ cart, setCart }) {
 
   const loc = useLocation();
-  const product = loc.state.product;
-  const dispatch = useDispatch();
+  const product = loc.state?.product;
+
+  if (!product) {
+    return (
+        <div className="product-page">
+            <h1>Please select a product</h1>
+
+            <Link
+                className="product-back"
+                to="/menu"
+            >
+                View Menu
+            </Link>
+        </div>
+    );
+}
 
   return (
     <div className="product-page">
@@ -61,16 +73,10 @@ function ProductDetails() {
               <button>+</button>
             </div>
 
-            <button className="add-product" onClick={
-              () => dispatch(add({
-                id: product.id,
-                title: product.title,
-                description: product.description,
-                price: product.price,
-                category: product.category,
-                quantity: 1
-              }))
-            }>
+            <button
+              className="add-product"
+              onClick={() => setCart([...cart, product])}
+            >
               Add to Cart
             </button>
           </div>

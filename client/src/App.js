@@ -1,10 +1,9 @@
-import RouteSwitch from './RouteSwitch';
-import { Router } from 'react-router';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import { useState } from 'react';
-import './App.css';
-import { BrowserRouter, Route } from 'react-router';
+import RouteSwitch from "./RouteSwitch";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   
   return (
