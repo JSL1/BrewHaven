@@ -79,10 +79,7 @@ const Footer = () => {
 
 
       <div className="footer-bottom">
-        <span>
-          © 2026 BrewHaven Inc.
-        </span>
-
+        <span> &copy; 2026 BrewHaven Inc. - COMP229 Group 1</span>
         <div>
           <span>Terms of Service</span>
           <span>Privacy Policy</span>

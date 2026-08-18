@@ -103,7 +103,6 @@ function Signup() {
                     minLength="6"
                     required
                 />
-
                 <input
                     type="password"
                     placeholder="Confirm password"
@@ -114,17 +113,10 @@ function Signup() {
                     minLength="6"
                     required
                 />
-
-                <button type="submit">
-                    Create Account
-                </button>
+                <button type="submit">Create Account</button>
             </form>
-
             {message && <p>{message}</p>}
-
-            <p>
-                Already have an account?{" "}
-                <Link to="/login">Login</Link>
+            <p>Already have an account?{" "}<Link to="/login">Login</Link>
             </p>
         </div>
     );

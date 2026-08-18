@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './../App.css';
 import { Coffee, Truck, Gift } from 'lucide-react';
@@ -9,41 +10,29 @@ const Homepage = () => {
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="tag">Now offering custom craft roasts</div>
-
           <h1>
-            Crafting moments,
-            <br />
-            one perfect cup at a
-            <br />
-            time
+            Crafting moments,<br />
+            one perfect cup at a<br />
+            time.
           </h1>
-
-          <p>
-            Fresh coffee, tea and baked goods made for every kind of day.
-          </p>
-
+          <p>Fresh coffee, tea and baked goods made for every kind of day.</p>
           <div className="hero-buttons">
             <a href="/menu">
               <button className="order-button">Order Now</button>
             </a>
-
             <a href="/menu">
               <button className="browse-button">Browse Menu</button>
             </a>
           </div>
         </div>
-
         <div className="hero-image">
           <img src="/images/hero.jpg" alt="Latte" />
         </div>
       </section>
 
-
       <section className="featured" id="menu">
         <h2>Featured Barista Specialties</h2>
-
         <div className="product-grid">
-
           <div className="product-card">
             <div className="product-image">
               <img src="/images/coffee1.png" alt="Iced Caramel Latte" />
@@ -52,11 +41,7 @@ const Homepage = () => {
             <div className="product-info">
               <h3>Iced Caramel Latte</h3>
               <span className="price">$5.75</span>
-
-              <p>
-                Espresso, milk, caramel and ice.
-              </p>
-
+              <p>Espresso, milk, caramel and ice.</p>
               <a href="/menu">
                 <button>View Menu</button>
               </a>
@@ -72,11 +57,7 @@ const Homepage = () => {
             <div className="product-info">
               <h3>Vanilla Latte</h3>
               <span className="price">$6.25</span>
-
-              <p>
-                Espresso with steamed milk and vanilla.
-              </p>
-
+              <p>Espresso with steamed milk and vanilla.</p>
               <a href="/menu">
                 <button>View Menu</button>
               </a>
@@ -86,19 +67,15 @@ const Homepage = () => {
 
           <div className="product-card">
             <div className="product-image">
-              <img src="/images/coffee3.jpg" alt="Iced Coffee" />
+              <img src="/images/coffee1.png" alt="Iced Coffee" />
             </div>
 
             <div className="product-info">
               <h3>Iced Coffee</h3>
               <span className="price">$4.95</span>
-
-              <p>
-                Cold coffee served over ice.
-              </p>
-
+              <p>Cold coffee served over ice.</p>
               <a href="/menu">
-                <button>View Menu</button>
+                <button>View item</button>
               </a>
             </div>
           </div>
@@ -118,7 +95,7 @@ const Homepage = () => {
               <img src="/images/cold.jpg" alt="Cold Drinks" />
               </Link>
             </div>
-            <span>15 choices</span>
+            <span>4 Choices</span>
             <p>Cold Drinks</p>
           </div>
 
@@ -128,7 +105,7 @@ const Homepage = () => {
               <img src="/images/beans.jpg" alt="Coffee" />
               </Link>
             </div>
-            <span></span>
+            <span>3 Choices</span>
             <p>Coffee</p>
           </div>
 
@@ -137,7 +114,7 @@ const Homepage = () => {
             <div className="category-image category-placeholder">
               <img src="images/teabag.png" alt="Tea" />
             </div>
-            <span>8 choices</span>
+            <span>3 choices</span>
             <p>Tea</p>
             </Link>
           </div>
@@ -147,7 +124,7 @@ const Homepage = () => {
             <div className="category-image">
               <img src="/images/bakery.jpg" alt="Bakery" />
             </div>
-            <span>14 choices</span>
+            <span>2 choices</span>
             <p>Fresh Bakery</p>
             </Link>
           </div>

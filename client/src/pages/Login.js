@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import API_BASE_URL from "../config/api";
 
@@ -72,7 +73,7 @@ function Login() {
       </form>
 
       {message && <p>{message}</p>}
-
+      <p>No account?{" "}<Link to="/signup">Sign up now.</Link></p>
     </div>
   );
 }
