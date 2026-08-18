@@ -18,7 +18,6 @@ const Header = () => {
         <Link to="/menu">Menu</Link>
         <Link to="/orders">Orders</Link>
         <Link to="/profile">Profile</Link>
-        <Link to="/login">Log In</Link>
         <Link to="/cart">Cart</Link>
         <Link to="/login">Login</Link>
         <Link to="/signup">Sign Up</Link>
