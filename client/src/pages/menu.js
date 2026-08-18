@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../App.css';
 import API_BASE_URL from "../config/api";
 
-
 function Menu({ cart, setCart }) {
+
+  const loc = useLocation();
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('All Categories');
+  const [category, setCategory] = useState(loc.state?.category || "All Categories"); //getting the category from the previous page click, or fall back to all
   const [loading, setLoading] = useState(true);
   const [addedItem, setAddedItem] = useState(null);
-
+  
   useEffect(() => {
     fetch(`${API_BASE_URL}/items`)
       .then(response => response.json())

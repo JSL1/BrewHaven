@@ -11,16 +11,12 @@ function ProductDetails({ cart, setCart }) {
     return (
         <div className="product-page">
             <h1>Please select a product</h1>
-
-            <Link
-                className="product-back"
-                to="/menu"
-            >
+            <Link className="product-back" to="/menu">
                 View Menu
             </Link>
         </div>
     );
-}
+  }
 
   return (
     <div className="product-page">
@@ -32,7 +28,7 @@ function ProductDetails({ cart, setCart }) {
       <div className="product-details">
 
         <div className="product-details-image">
-          <img src="/images/coffee2.png" alt="Classic Latte" />
+          <img src={`/images/${product.image}`} alt="Classic Latte" />
         </div>
 
         <div className="product-details-info">

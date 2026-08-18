@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './../App.css';
 import { Coffee, Truck, Gift } from 'lucide-react';
 
@@ -112,7 +114,9 @@ const Homepage = () => {
 
           <div className="category">
             <div className="category-image category-placeholder">
-              Cold Drinks
+              <Link to="/menu" state={{ category: "Cold Drinks"}}>
+              <img src="/images/cold.jpg" alt="Cold Drinks" />
+              </Link>
             </div>
             <span>15 choices</span>
             <p>Cold Drinks</p>
@@ -120,26 +124,32 @@ const Homepage = () => {
 
           <div className="category">
             <div className="category-image category-placeholder">
-              Iced Coffees
+              <Link to="/menu" state={{ category: "Cold Drinks"}}>
+              <img src="/images/beans.jpg" alt="Coffee" />
+              </Link>
             </div>
-            <span>12 choices</span>
-            <p>Iced Coffees</p>
+            <span></span>
+            <p>Coffee</p>
           </div>
 
           <div className="category">
+          <Link to="/menu" state={{ category: "Tea"}}>
             <div className="category-image category-placeholder">
-              Tea
+              <img src="images/teabag.png" alt="Tea" />
             </div>
             <span>8 choices</span>
             <p>Tea</p>
+            </Link>
           </div>
 
           <div className="category">
+            <Link to="/menu" state={{ category: "Bakery"}}>
             <div className="category-image">
               <img src="/images/bakery.jpg" alt="Bakery" />
             </div>
             <span>14 choices</span>
             <p>Fresh Bakery</p>
+            </Link>
           </div>
 
         </div>
